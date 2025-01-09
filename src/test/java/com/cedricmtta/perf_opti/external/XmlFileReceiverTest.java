@@ -6,8 +6,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.util.StopWatch;
 
-import java.io.FileNotFoundException;
-
 @SpringBootTest
 class XmlFileReceiverTest {
 
@@ -15,7 +13,7 @@ class XmlFileReceiverTest {
     private XmlFileReceiver xmlFileReceiver;
 
     @Test
-    void performanceTest() throws FileNotFoundException {
+    void performanceTest() {
         var xmlFileToTransform = new ClassPathResource("XmlFileReceiverTest/SampleData.xml");
 
         var stopwatch = new StopWatch();
